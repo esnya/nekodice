@@ -1,0 +1,23 @@
+extends:
+    - eslint:recommended
+plugins:
+    - node
+parserOptions:
+    ecmaVersion: 7
+    ecmaFeatures:
+        experimentalRestSpread: true
+    sourceType: module
+env:
+    node: true
+    browser: true
+rules:
+    node/no-missing-import: error
+    node/no-missing-require: error
+    node/no-unpublished-import: error
+    node/no-unsupported-features: off
+    node/shebang: error
+
+    comma-dangle:
+        - error
+        - always-multiline
+    eol-last: error
