@@ -22,7 +22,7 @@ gulp.task('browserify', () =>
     browserify({
             entries: 'src',
             debug: true,
-            standalone: 'nekodice',
+            standalone: 'Nekodice',
             transform: ['babelify'],
         })
         .bundle()

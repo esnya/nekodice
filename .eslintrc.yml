@@ -10,6 +10,8 @@ parserOptions:
 env:
     node: true
     browser: true
+globals:
+    Float32Array: true
 rules:
     node/no-missing-import: error
     node/no-missing-require: error
