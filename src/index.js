@@ -22,10 +22,11 @@ class Nekodice {
         //const material = new THREE.MeshBasicMaterial({color: 0xff0000, wireframe: true});
         const material = new THREE.MeshLambertMaterial({color: 0x2194ce});
 
-        const meshes = this.meshes = [4, 6, 8, 10].map((faces, i) => {
+        const facesList = [4, 6, 8, 10, 20];
+        const meshes = this.meshes = facesList.map((faces, i) => {
             const geometry = new Dice[`Dice${faces}`](300);
             const mesh = new THREE.Mesh(geometry, material);
-            mesh.position.x = (i - 1.5) * 400;
+            mesh.position.x = (i - facesList.length / 2) * 400;
 
             return mesh;
         });
